@@ -1,0 +1,9 @@
+Building Heavycoin
+
+See doc/readme-qt.rst for instructions on building Heavycoin-Qt,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Bitcoin.
+
+See doc/build-*.txt for instructions on building bitcoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of Bitcoin.

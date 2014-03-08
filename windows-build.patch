@@ -1,0 +1,74 @@
+diff --git a/bitcoin-qt.pro b/bitcoin-qt.pro
+index d178280..60b2200 100644
+--- a/bitcoin-qt.pro
++++ b/bitcoin-qt.pro
+@@ -21,6 +21,16 @@ CONFIG += thread
+ OBJECTS_DIR = build
+ MOC_DIR = build
+ UI_DIR = build
++BOOST_LIB_SUFFIX=-mgw46-mt-sd-1_50
++BOOST_INCLUDE_PATH=C:\Source\deps\boost_1_50_0
++BOOST_LIB_PATH=C:\Source\deps\boost_1_50_0\stage\lib
++BDB_INCLUDE_PATH=C:\Source\deps\db-4.8.30.NC\build_unix
++BDB_LIB_PATH=C:\Source\deps\db-4.8.30.NC\build_unix
++OPENSSL_INCLUDE_PATH=C:\Source\deps\openssl-1.0.1c\include
++OPENSSL_LIB_PATH=C:\Source\deps\openssl-1.0.1c
++MINIUPNPC_INCLUDE_PATH=C:\Source\deps\miniupnpc-1.5.20110215
++MINIUPNPC_LIB_PATH=C:\Source\deps\miniupnpc-1.5.20110215
++
+ 
+ # use: qmake "RELEASE=1"
+ contains(RELEASE, 1) {
+@@ -43,7 +53,7 @@ contains(RELEASE, 1) {
+     # This can be enabled for Windows, when we switch to MinGW >= 4.4.x.
+ }
+ # for extra security (see: https://wiki.debian.org/Hardening): this flag is GCC compiler-specific
+-QMAKE_CXXFLAGS *= -D_FORTIFY_SOURCE=2
++QMAKE_CXXFLAGS *= -D_FORTIFY_SOURCE=2 -DHAVE_BUILD_INFO
+ # for extra security on Windows: enable ASLR and DEP via GCC linker flags
+ win32:QMAKE_LFLAGS *= -Wl,--dynamicbase -Wl,--nxcompat
+ # on Windows: enable GCC large address aware linker flag
+@@ -110,7 +120,7 @@ LIBS += $$PWD/src/leveldb/libleveldb.a $$PWD/src/leveldb/libmemenv.a
+         QMAKE_RANLIB = $$replace(QMAKE_STRIP, strip, ranlib)
+     }
+     LIBS += -lshlwapi
+-    genleveldb.commands = cd $$PWD/src/leveldb && CC=$$QMAKE_CC CXX=$$QMAKE_CXX TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) OPT=\"$$QMAKE_CXXFLAGS $$QMAKE_CXXFLAGS_RELEASE\" libleveldb.a libmemenv.a && $$QMAKE_RANLIB $$PWD/src/leveldb/libleveldb.a && $$QMAKE_RANLIB $$PWD/src/leveldb/libmemenv.a
++    # genleveldb.commands = cd $$PWD/src/leveldb && CC=$$QMAKE_CC CXX=$$QMAKE_CXX TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) OPT=\"$$QMAKE_CXXFLAGS $$QMAKE_CXXFLAGS_RELEASE\" libleveldb.a libmemenv.a && $$QMAKE_RANLIB $$PWD/src/leveldb/libleveldb.a && $$QMAKE_RANLIB $$PWD/src/leveldb/libmemenv.a
+ }
+ genleveldb.target = $$PWD/src/leveldb/libleveldb.a
+ genleveldb.depends = FORCE
+diff --git a/src/makefile.mingw b/src/makefile.mingw
+index 0af4cf7..cff51a7 100644
+--- a/src/makefile.mingw
++++ b/src/makefile.mingw
+@@ -21,14 +21,20 @@ USE_UPNP:=-
+ USE_IPV6:=1
+ 
+ DEPSDIR?=/usr/local
+-BOOST_SUFFIX?=-mgw46-mt-sd-1_52
++BOOST_SUFFIX?=-mgw46-mt-s-1_50
+ 
+ INCLUDEPATHS= \
+  -I"$(CURDIR)" \
++ -I"c:/Source/deps/boost_1_50_0" \
++ -I"c:/Source/deps/db-4.8.30.NC/build_unix" \
++ -I"c:/Source/deps/openssl-1.0.1c/include" \
+  -I"$(DEPSDIR)/include"
+ 
+ LIBPATHS= \
+  -L"$(CURDIR)/leveldb" \
++ -L"c:/Source/deps/boost_1_50_0/stage/lib" \
++ -L"c:/Source/deps/db-4.8.30.NC/build_unix" \
++ -L"c:/Source/deps/openssl-1.0.1c" \
+  -L"$(DEPSDIR)/lib"
+ 
+ LIBS= \
+@@ -47,7 +53,7 @@ DEFS=-DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
+ DEBUGFLAGS=-g
+ CFLAGS=-mthreads -O2 -w -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter $(DEBUGFLAGS) $(DEFS) $(INCLUDEPATHS)
+ # enable: ASLR, DEP and large address aware
+-LDFLAGS=-Wl,--dynamicbase -Wl,--nxcompat -Wl,--large-address-aware
++LDFLAGS=-Wl,--dynamicbase -Wl,--nxcompat -Wl,--large-address-aware -static
+ 
+ TESTDEFS = -DTEST_DATA_DIR=$(abspath test/data)
+ 
