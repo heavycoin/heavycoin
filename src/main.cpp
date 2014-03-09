@@ -1364,12 +1364,11 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
 
     // Heavycoin Temporal Retargeting - exits "blackhole" in ~3hrs
     if (pindexLast->nHeight > nLifeWindow && count < nLifeWindow/4) {
-        // Average missing blocks (min difficulty) and real blocks.
         int min = nLifeWindow/4 - count;
         printf("Retarget: **** Heavycoin Temporal Retargeting **** %d/%d : factor = %d\n",
-               count, (int)nLifeWindow/4, (int)pow(2, min));
+               count, (int)nLifeWindow/4, (int)pow(2.0f, min));
 
-        bnNew *= (int)pow(2, min);
+        bnNew *= (int)pow(2.0f, min);
 
         printf("Retarget: heal  = %g %08x %s\n", CalcDifficulty(bnNew.GetCompact()),
                bnNew.GetCompact(), bnNew.getuint256().ToString().c_str());
