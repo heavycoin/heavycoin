@@ -59,10 +59,10 @@ nomisugi / BM-NBAsCmCqUYR8eaXgs8zebDNPw5rUyM1z
 The best way to contact us is using the BitMessage addresses above. 
 Warning: the handles above are our usernames on bitcointalk.org only.
 
+Bitcointalk Forum Thread: https://bitcointalk.org/index.php?topic=506774.0
+
 License
 -------
 
 Bitcoin is released under the terms of the MIT license. See `COPYING` for more
 information or see http://opensource.org/licenses/MIT.
-
-Bitcointalk Forum Thread: https://bitcointalk.org/index.php?topic=506774.0
