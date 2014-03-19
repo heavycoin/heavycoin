@@ -55,6 +55,9 @@ Heavycoin has a strong developer backing who are comitted to its success. Over t
 keccak512 <BM-NBuu8hBFdnqAeKs42Yg7nftB3QLfJ8ra>
 nomisugi <BM-NBAsCmCqUYR8eaXgs8zebDNPw5rUyM1z>
 
+The best way to contact us is using the BitMessage addresses above. 
+Warning: the handles above are our usernames on bitcointalk.org only.
+
 License
 -------
 
