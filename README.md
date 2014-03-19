@@ -52,8 +52,9 @@ Developers
 -------
 Heavycoin has a strong developer backing who are comitted to its success. Over time we hope the Heavycoin developer community will grow larger and our long-term goal is to form an open source Heavycoin Foundation for promoting and developing Heavycoin over many years to come.  The current Heavycoin core developers are
 
-keccak512 <BM-NBuu8hBFdnqAeKs42Yg7nftB3QLfJ8ra>
-nomisugi <BM-NBAsCmCqUYR8eaXgs8zebDNPw5rUyM1z>
+keccak512 / BM-NBuu8hBFdnqAeKs42Yg7nftB3QLfJ8ra
+
+nomisugi / BM-NBAsCmCqUYR8eaXgs8zebDNPw5rUyM1z
 
 The best way to contact us is using the BitMessage addresses above. 
 Warning: the handles above are our usernames on bitcointalk.org only.
