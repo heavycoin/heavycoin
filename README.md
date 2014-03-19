@@ -28,7 +28,7 @@ Goals
 
 * Achieve massive adoption as a major crypto-currency
 * Provide long-term open source development, support and maintenance
-* Promote a large-scale decentralized CPU-only mining community
+* Promote a large-scale decentralized mining community
 * Build a gigantic community of stakeholders from a diverse set backgrounds
 * Promote the use of democratic processes in peer-to-peer systems using decentralized block reward voting
 
