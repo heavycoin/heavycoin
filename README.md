@@ -19,7 +19,7 @@ Innovations and contributions
 
 * Achieve massive adoption as a major crypto-currency
 * Provide long-term open source development, support and maintenance
-* Promote a large-scale decentralized CPU-only mining community
+* Promote a large-scale decentralized mining community
 * Build a gigantic community of stakeholders from a diverse set backgrounds
 * Promote the use of democratic processes in peer-to-peer systems using decentralized block reward voting
 
@@ -35,7 +35,7 @@ Goals
 Specifications
 -------
 
-* Introduces HEFTY1, a novel approach to proof-of-work
+* ASIC-resistant: Introduces HEFTY1 a cryptographic hash function for ASIC-resistant proof-of-work
 * Ultra-secure: combines SHA-256, Keccak-512, Grøestl-512, BLAKE-512 in a secure way
 * Block time: 2 Min
 * Retarget up: Every 5 blocks (max 100%)
