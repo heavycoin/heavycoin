@@ -154,6 +154,7 @@ extern json_spirit::Value getreward(const json_spirit::Array& params, bool fHelp
 extern json_spirit::Value getsupply(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value getmaxmoney(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value gethashespersec(const json_spirit::Array& params, bool fHelp);
+extern json_spirit::Value getnetworkhashps(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value getmininginfo(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value getwork(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value getblocktemplate(const json_spirit::Array& params, bool fHelp);
