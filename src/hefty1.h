@@ -1,5 +1,5 @@
 /*
- * HEFTY1 CPU-only cryptographic hash function
+ * HEFTY1 cryptographic hash function
  *
  * Copyright (c) 2014, dbcc14 <BM-NBx4AKznJuyem3dArgVY8MGyABpihRy5>
  * All rights reserved.

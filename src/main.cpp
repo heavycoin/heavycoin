@@ -1206,7 +1206,7 @@ uint16_t GetCurrentBlockReward(CBlockIndex *pindexPrev)
 }
 
 const int64 nTargetTimespan = 2 * 60; // 2 minutes
-static const int64 nInterval = 5; // 10 minutes
+const int64 nInterval = 5; // 10 minutes
 const int64 nDiffWindow = 30; // 1 hour
 const int64 nLifeWindow = 120; // 4 hours
 // const int64 nDiffWindow = 10; // 20 min
@@ -1271,7 +1271,7 @@ static void LogBlock(CBlock &block)
                          bnAvg24, nAvgTimespan24, nAvgRatio24);
 
 
-        printf("Block chain: %s | %d | last %.8f %08x %.3f | 1hr %.8f %08x %.3f %.3f | 24hr %.8f %08x %.3f %.3f | last %"PRI64d"\n",
+        printf("Block chain: %s | %d | last %.8f %08x %.3f | 1hr %.8f %08x %.3f %.3f | 24hr %.8f %08x %.3f %.3f | stats %hu %u %hu | vote %hu | last %"PRI64d"\n",
                DateTimeStrFormat("%Y-%m-%d %H:%M:%S", GetTime()).c_str(),
                nHeight,
                (float)CalcDifficulty(hdr.nBits),
@@ -1285,6 +1285,8 @@ static void LogBlock(CBlock &block)
                bnAvg24.GetCompact(),
                nAvgRatio24,
                nAvgTimespan24,
+               hdr.nReward, hdr.getSupply(),
+               GetNextBlockReward(pindexPrev), hdr.nVote,
                nLastTimespan);
     }
 }

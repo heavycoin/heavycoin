@@ -24,8 +24,11 @@ Value GetNetworkHashPS(int lookup, int height) {
         return 0;
 
     // If lookup is -1, then use blocks since last difficulty change.
+    // Heavycoin difficulty changes every block on downward diff an
+    // every nInterval blocks on upward.  To keep it simple, just go
+    // back nInterval.
     if (lookup <= 0)
-        lookup = pb->nHeight % 2016 + 1;
+        lookup = pb->nHeight % nInterval + 1;
 
     // If lookup is larger than chain, then set it to chain length.
     if (lookup > pb->nHeight)

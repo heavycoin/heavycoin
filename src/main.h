@@ -53,6 +53,7 @@ extern uint16_t nBlockRewardVoteSpan;
 extern uint16_t nPhase;
 extern uint32_t nTarget;
 extern uint32_t nMaxSupply;
+extern const int64 nInterval;
 
 // Release
 static const int64 PHASE1_MONEY = 53000000; // 45,000,000 (min 30D, max 171Y)
