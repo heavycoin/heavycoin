@@ -142,12 +142,24 @@ Value getmaxvote(const Array& params, bool fHelp)
 
 Value getnextrewardestimate(const Array& params, bool fHelp)
 {
-    if (fHelp || params.size() != 0)
+    if (fHelp || params.size() > 1)
         throw runtime_error(
-            "getnextrewardestimate\n"
-            "Returns an estimate of the next block reward based on decentralized voting.");
+            "getnextrewardestimate [height]\n"
+            "Returns an estimate of the next block reward based on decentralized voting.\n"
+            "Pass in [height] to show the historic block reward estimate at a given height.\n");
 
-    return (boost::int64_t)GetNextBlockReward(pindexBest);
+
+    CBlockIndex *pb = pindexBest;
+    if (params.size() > 0) {
+        int height = params[0].get_int();
+        if (height >= 0 && height < nBestHeight)
+            pb = FindBlockByHeight(height);
+
+        if (pb == NULL || !pb->nHeight)
+            return 0;
+    }
+
+    return (boost::int64_t)GetNextBlockReward(pb);
 }
 
 Value getnextrewardwhenstr(const Array& params, bool fHelp)

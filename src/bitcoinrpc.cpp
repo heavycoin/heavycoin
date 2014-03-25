@@ -1161,6 +1161,7 @@ Array RPCConvertValues(const std::string &strMethod, const std::vector<std::stri
     if (strMethod == "setvote"                && n > 0) ConvertTo<boost::int64_t>(params[0]);
     if (strMethod == "getnetworkhashps"       && n > 0) ConvertTo<int>(params[0]);
     if (strMethod == "getnetworkhashps"       && n > 1) ConvertTo<int>(params[1]);
+    if (strMethod == "getnextrewardestimate"  && n > 0) ConvertTo<int>(params[0]);
     if (strMethod == "getreceivedbyaddress"   && n > 1) ConvertTo<boost::int64_t>(params[1]);
     if (strMethod == "getreceivedbyaccount"   && n > 1) ConvertTo<boost::int64_t>(params[1]);
     if (strMethod == "listreceivedbyaddress"  && n > 0) ConvertTo<boost::int64_t>(params[0]);
