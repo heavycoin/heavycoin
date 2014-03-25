@@ -4,7 +4,7 @@ Heavycoin
 http://heavycoin.github.io
 
 Copyright (c) 2014 The Heavycoin developers,
-(c) 2009-2013 Bitcoin Developers
+(c) 2009-2014 Bitcoin Developers
 
 What is Heavycoin?
 ----------------
