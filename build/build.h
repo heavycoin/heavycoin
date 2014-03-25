@@ -1,0 +1,2 @@
+#define BUILD_DESC "1.0-17-gcb3929b"
+#define BUILD_DATE "2014-03-25 10:46:51 +0000"

@@ -1,7 +1,7 @@
 src/*.exe
 src/heavycoin
 src/heavycoind
-src/test_bitcoin
+src/test_heavycoin
 .*.swp
 *.*~*
 *.bak
@@ -15,7 +15,7 @@ src/test_bitcoin
 *.qm
 Makefile
 heavycoin-qt
-Bitcoin-Qt.app
+Heavycoin-Qt.app
 
 # Unit-tests
 Makefile.test
@@ -29,9 +29,9 @@ qrc_*.cpp
 
 # Mac specific
 .DS_Store
-build
 
 !src/leveldb-*/Makefile
 !src/leveldb/Makefile
 !windows-build.patch
 !build/build.h
+build

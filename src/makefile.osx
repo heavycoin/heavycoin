@@ -124,7 +124,7 @@ ifneq (${USE_IPV6}, -)
 	DEFS += -DUSE_IPV6=$(USE_IPV6)
 endif
 
-all: heavycoind genkeys
+all: heavycoind
 
 test check: test_heavycoin FORCE
 	./test_heavycoin
@@ -164,9 +164,6 @@ obj/%.o: %.c
 heavycoind: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
-genkeys: obj/hefty1.o obj/keccak.o obj/blake.o obj/groestl.o
-	$(CXX) $(CFLAGS) -g genkeys.cpp -o genkeys $(LIBPATHS) obj/hefty1.o obj/keccak.o obj/blake.o obj/groestl.o /opt/local/lib/libssl.a /opt/local/lib/libcrypto.a  /opt/local/lib/libboost_system-mt.a  /opt/local/lib/libz.a
-
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
 
 obj-test/%.o: test/%.cpp
@@ -180,7 +177,7 @@ test_heavycoin: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS) $(TESTLIBS)
 
 clean:
-	-rm -f heavycoind test_heavycoin genkeys
+	-rm -f heavycoind test_heavycoin
 	-rm -f obj/*.o
 	-rm -f obj-test/*.o
 	-rm -f obj/*.P

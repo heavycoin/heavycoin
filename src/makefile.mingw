@@ -106,7 +106,7 @@ OBJS= \
     obj/txdb.o
 
 
-all: heavycoind.exe genkeys.exe
+all: heavycoind.exe
 
 
 test check: test_heavycoin.exe FORCE
@@ -130,9 +130,6 @@ obj/%.o: %.c $(HEADERS)
 heavycoind.exe: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
-genkeys.exe: obj/hefty1.o obj/keccak.o obj/blake.o obj/groestl.o
-	$(CXX) $(CFLAGS) $(LDFLAGS) -g genkeys.cpp -o genkeys $(LIBPATHS) obj/hefty1.o obj/keccak.o obj/blake.o obj/groestl.o $(LIBS)
-
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
 
 obj-test/%.o: test/%.cpp $(HEADERS)
@@ -142,7 +139,7 @@ test_heavycoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework$(BOOST_SUFFIX) $(LIBS)
 
 clean:
-	rm -f heavycoind.exe test_heavycoin.exe genkeys
+	rm -f heavycoind.exe test_heavycoin.exe
 	rm -f obj/*
 	rm -f obj-test/*
 	cd leveldb && $(MAKE) TARGET_OS=NATIVE_WINDOWS clean && cd ..
