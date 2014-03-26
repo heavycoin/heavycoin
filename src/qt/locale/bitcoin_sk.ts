@@ -270,7 +270,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Heavycoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Heavycoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Heavycoins from being stolen by malware infecting your computer.</source>
         <translation>Heavycoin sa teraz ukončí pre dokončenie procesu šifrovania. Pamätaj že šifrovanie peňaženky Ťa nemôže úplne ochrániť pred kráďežou bitcoinov pomocou škodlivého software.</translation>
     </message>
     <message>
@@ -415,7 +415,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-347"/>
         <source>Send coins to a Heavycoin address</source>
-        <translation>Poslať bitcoins na adresu</translation>
+        <translation>Poslať Heavycoins na adresu</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -1334,7 +1334,7 @@ Adresa: %4</translation>
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>Potvrdiť odoslanie bitcoins</translation>
+        <translation>Potvrdiť odoslanie Heavycoins</translation>
     </message>
     <message>
         <location line="+1"/>
