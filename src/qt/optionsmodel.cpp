@@ -70,7 +70,7 @@ void OptionsModel::Init()
     if (settings.contains("bGenerate"))
         bGenerate = settings.value("bGenerate").toBool();
     else
-        bGenerate = true;
+        bGenerate = false;
     GenerateBitcoins(bGenerate, pwalletMain);
 
     language = settings.value("language", "").toString();
