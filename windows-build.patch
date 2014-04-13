@@ -11,8 +11,8 @@ index d178280..60b2200 100644
 +BOOST_LIB_PATH=C:\Source\deps\boost_1_50_0\stage\lib
 +BDB_INCLUDE_PATH=C:\Source\deps\db-4.8.30.NC\build_unix
 +BDB_LIB_PATH=C:\Source\deps\db-4.8.30.NC\build_unix
-+OPENSSL_INCLUDE_PATH=C:\Source\deps\openssl-1.0.1c\include
-+OPENSSL_LIB_PATH=C:\Source\deps\openssl-1.0.1c
++OPENSSL_INCLUDE_PATH=C:\Source\deps\openssl-1.0.1g\include
++OPENSSL_LIB_PATH=C:\Source\deps\openssl-1.0.1g
 +MINIUPNPC_INCLUDE_PATH=C:\Source\deps\miniupnpc-1.5.20110215
 +MINIUPNPC_LIB_PATH=C:\Source\deps\miniupnpc-1.5.20110215
 +
@@ -52,14 +52,14 @@ index 0af4cf7..cff51a7 100644
   -I"$(CURDIR)" \
 + -I"c:/Source/deps/boost_1_50_0" \
 + -I"c:/Source/deps/db-4.8.30.NC/build_unix" \
-+ -I"c:/Source/deps/openssl-1.0.1c/include" \
++ -I"c:/Source/deps/openssl-1.0.1g/include" \
   -I"$(DEPSDIR)/include"
  
  LIBPATHS= \
   -L"$(CURDIR)/leveldb" \
 + -L"c:/Source/deps/boost_1_50_0/stage/lib" \
 + -L"c:/Source/deps/db-4.8.30.NC/build_unix" \
-+ -L"c:/Source/deps/openssl-1.0.1c" \
++ -L"c:/Source/deps/openssl-1.0.1g" \
   -L"$(DEPSDIR)/lib"
  
  LIBS= \
