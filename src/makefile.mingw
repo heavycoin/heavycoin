@@ -43,7 +43,7 @@ LIBS= \
  -l ssl \
  -l crypto
 
-DEFS=-DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
+DEFS=-DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO
 DEBUGFLAGS=-g
 CFLAGS=-mthreads -O2 -w -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter $(DEBUGFLAGS) $(DEFS) $(INCLUDEPATHS)
 # enable: ASLR, DEP and large address aware
@@ -69,6 +69,7 @@ LIBS += -l kernel32 -l user32 -l gdi32 -l comdlg32 -l winspool -l winmm -l shell
 HEADERS = $(wildcard *.h)
 
 OBJS= \
+    build.h \
     leveldb/libleveldb.a \
     obj/hefty1.o \
     obj/keccak.o \
@@ -111,6 +112,9 @@ all: heavycoind.exe
 
 test check: test_heavycoin.exe FORCE
 	heavy_bitcoin.exe
+
+build.h: ../build/build.h
+	cp ../build/build.h .
 
 #
 # LevelDB support
