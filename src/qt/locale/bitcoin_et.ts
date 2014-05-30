@@ -1068,7 +1068,7 @@ Aadress: %4⏎</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start heavycoin: click-to-pay handler</source>
         <translation>Heavycoin ei käivitu: vajuta-maksa toiming</translation>
     </message>
 </context>

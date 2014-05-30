@@ -1068,8 +1068,8 @@ Endereço: %4</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Não foi possível iniciar bitcoin: manipulador clique-para-pagar</translation>
+        <source>Cannot start heavycoin: click-to-pay handler</source>
+        <translation>Não foi possível iniciar heavycoin: manipulador clique-para-pagar</translation>
     </message>
 </context>
 <context>

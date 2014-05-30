@@ -1069,8 +1069,8 @@ Adresa: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Nemůžu spustit bitcoin: obsluha click-to-pay</translation>
+        <source>Cannot start heavycoin: click-to-pay handler</source>
+        <translation>Nemůžu spustit heavycoin: obsluha click-to-pay</translation>
     </message>
 </context>
 <context>

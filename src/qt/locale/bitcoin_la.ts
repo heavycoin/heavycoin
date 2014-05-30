@@ -1068,7 +1068,7 @@ Inscriptio: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start heavycoin: click-to-pay handler</source>
         <translation>Heavycoin incipere non potest: cliccare-ad-pensandum handler</translation>
     </message>
 </context>
