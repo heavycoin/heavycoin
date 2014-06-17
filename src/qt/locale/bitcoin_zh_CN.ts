@@ -10,7 +10,7 @@
     <message>
         <location line="+39"/>
         <source>&lt;b&gt;Heavycoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;重币&lt;/b&gt;版本</translation>
+        <translation>&lt;b&gt;海汇币&lt;/b&gt;版本</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -456,7 +456,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="-165"/>
         <location line="+530"/>
         <source>Heavycoin</source>
-        <translation>重币</translation>
+        <translation>海汇币</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -1241,7 +1241,7 @@ Address: %4
     <message>
         <location line="-104"/>
         <source>Heavycoin - Debug window</source>
-        <translation>重币 - 调试窗口</translation>
+        <translation>海汇币 - 调试窗口</translation>
     </message>
     <message>
         <location line="+25"/>
